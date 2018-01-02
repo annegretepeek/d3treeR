@@ -20,6 +20,7 @@ HTMLWidgets.widget({
     var valueField = x.options.valueField ? x.options.valueField : "size";
     var celltext = x.options.celltext ? x.options.celltext : "name";
     var cellid = x.options.id ? x.options.id : "id";
+    var tootip = x.options.tooltip ? x.options.tooltip : "size";
 
     // thanks Mike Bostock and Zan Armstrong for all the code on which
     //    this is based
@@ -235,7 +236,7 @@ HTMLWidgets.widget({
               communicateClick(d);
             })
           .append("title")
-            .text(function(d) { return formatNumber(d[valueField]); });
+            .text(function(d) { return d[tooltip]; });
 
         g.append("text")
             .attr("dy", ".75em")
