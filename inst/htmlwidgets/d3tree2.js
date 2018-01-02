@@ -20,7 +20,7 @@ HTMLWidgets.widget({
     var valueField = x.options.valueField ? x.options.valueField : "size";
     var celltext = x.options.celltext ? x.options.celltext : "name";
     var cellid = x.options.id ? x.options.id : "id";
-    var tooltip = x.options.tooltip ? x.options.tooltip : "size";
+    var tooltip = x.options.tooltip ? x.options.tooltip : function(x){return x["name"] + "<br />" + x["size"];};
 
     // thanks Mike Bostock and Zan Armstrong for all the code on which
     //    this is based
