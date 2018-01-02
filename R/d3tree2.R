@@ -78,6 +78,7 @@ d3tree2 <- function(
   , celltext = "name"
   , id = "id"
   , valueField = "size"
+  , tooltip = "size"
   , clickAction = NULL
   , width = NULL
   , height = NULL
@@ -127,6 +128,7 @@ d3tree2 <- function(
       celltext = celltext
       ,id = id
       ,valueField = valueField
+      ,tooltip = tooltip
       ,clickAction = clickAction
     )
   )
