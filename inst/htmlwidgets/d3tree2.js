@@ -236,7 +236,7 @@ HTMLWidgets.widget({
               communicateClick(d);
             })
           .append("title")
-            .text(function(d) { return d[tooltip]; });
+            .text(function(d) { return typeof(tooltip) === "function" ? tooltip(d) : d[tooltip]; });
 
         g.append("text")
             .attr("dy", ".75em")
