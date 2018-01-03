@@ -20,7 +20,7 @@ HTMLWidgets.widget({
     var valueField = x.options.valueField ? x.options.valueField : "size";
     var celltext = x.options.celltext ? x.options.celltext : "name";
     var cellid = x.options.id ? x.options.id : "id";
-    var tooltip = x.options.tooltip ? x.options.tooltip : function(x){return x["name"] + "\n" + formatNumber(x["size"]);};
+    var tooltip = x.options.tooltip ? x.options.tooltip : function(x){return x["name"] + "\n" + x["size"];};
 
     // thanks Mike Bostock and Zan Armstrong for all the code on which
     //    this is based
@@ -30,7 +30,7 @@ HTMLWidgets.widget({
     var margin = {top: 20, right: 0, bottom: 20, left: 0},
         width = el.getBoundingClientRect().width,
         height = el.getBoundingClientRect().height - margin.top - margin.bottom,
-        formatNumber = d3.format(".1r"),
+        formatNumber = d3.format(".1f"),
         transitioning;
 
     var svg = d3.select(el).append("svg")
