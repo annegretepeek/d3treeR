@@ -30,7 +30,7 @@ HTMLWidgets.widget({
     var margin = {top: 20, right: 0, bottom: 20, left: 0},
         width = el.getBoundingClientRect().width,
         height = el.getBoundingClientRect().height - margin.top - margin.bottom,
-        formatNumber = d3.format(".1f"),
+        formatNumber = d3.format(".1r"),
         transitioning;
 
     var svg = d3.select(el).append("svg")
